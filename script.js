@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (errors.length > 0) {
       formErrors.innerHTML = errors.join('<br>');
     } else {
-      // Proceed with form submission or further processing
+
       form.submit();
     }
   });
