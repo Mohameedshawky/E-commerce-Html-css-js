@@ -79,3 +79,69 @@ function setupPayClickListener(){
     })
 
 }
+let currentIndex = 0;
+const slideDuration = 8000;
+
+function startSlider() {
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % products.length;
+    wrapper.style.transform = `translateX(${-100 * currentIndex}vw)`;
+
+
+    choosenProduct = products[currentIndex];
+    currentProductTitle.textContent = choosenProduct.title;
+    currentProductPrice.textContent = choosenProduct.price;
+    currentProductImg.src = choosenProduct.colors[0].img;
+
+    currentProductColors.forEach((color, index) => {
+      color.style.backgroundColor = choosenProduct.colors[index].code;
+    });
+  }, slideDuration);
+}
+startSlider();
+
+// Scroll to top functionality
+topButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('registrationForm');
+  const formErrors = document.getElementById('formErrors');
+  
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    formErrors.innerHTML = ''; 
+
+    const name = form.querySelector('#name').value;
+    const email = form.querySelector('#email').value;
+    const phone = form.querySelector('#phone').value;
+    
+    const errors = [];
+    
+
+    if (name.trim() === '') {
+      errors.push('Name is required.');
+    }
+
+    // Validate Email
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@iti\.com$/;
+    if (!emailPattern.test(email)) {
+      errors.push('Email must be in the format example@iti.com.');
+    }
+
+    // Validate Phone (assuming it should be Egyptian phone number format)
+    const phonePattern = /^01[0-9]{9}$/;
+    if (!phonePattern.test(phone)) {
+      errors.push('Phone number must be a valid Egyptian phone number (01XXXXXXXXX).');
+    }
+
+    if (errors.length > 0) {
+      formErrors.innerHTML = errors.join('<br>');
+    } else {
+      // Proceed with form submission or further processing
+      form.submit();
+    }
+  });
+});
+
