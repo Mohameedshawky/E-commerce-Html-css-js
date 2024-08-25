@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "title": "Air Jordan I",
+        "price": "$119",
+        "colors": [
+            {
+                "code": "black",
+                "img": "./img/airjordan1.png"
+            },
+            {
+                "code": "#FF7D2A",
+                "img": "./img/airjordan1O.png"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Air Max",
+        "price": "$119",
+        "colors": [
+            {
+                "code": "black",
+                "img": "./img/airmaxB.png"
+            },
+            {
+                "code": "white",
+                "img": "./img/airmaxW.png"
+            }
+        ]
+    },
+    
+    {
+        "id": 3,
+        "title": "Air Force",
+        "price": "$199",
+        "colors": [
+            {
+                "code": "white",
+                "img": "./img/airforceW1.png"
+            },
+            {
+                "code": "orangered",
+                "img": "./img/airforceO.png"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Air Jordan IV",
+        "price": "$149",
+        "colors": [
+            {
+                "code": "white",
+                "img": "./img/airjordanNW.png"
+            },
+            {
+                "code": "#D3C7D5",
+                "img": "./img/airjordanNew.png"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "AIR ZOOM ALPHAFLY",
+        "price": "$180",
+        "colors": [
+            {
+                "code": "#BED85D",
+                "img": "./img/zoomxY.png"
+            },
+            {
+                "code": "white",
+                "img": "./img/zoomxW.png"
+            }
+        ]
+    }
+]
